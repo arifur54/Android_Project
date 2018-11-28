@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateConferenceFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/create_conf_details"
+                android:layout_width="306dp"
+                android:layout_height="103dp"
+                android:layout_above="@+id/create_conf_btn"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="274dp"
+                android:layout_marginBottom="66dp"
+                android:ems="10"
+                android:hint="Conference Details"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+                tools:layout_editor_absoluteX="39dp"
+                tools:layout_editor_absoluteY="262dp" />
+
+            <Button
+                android:id="@+id/create_conf_btn"
+                android:layout_width="228dp"
+                android:layout_height="54dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="57dp"
+                android:background="@drawable/rounded_button_primary"
+                android:text="Create Conference"
+                android:textAllCaps="true"
+                android:textColor="#efefef"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="396dp" />
+
+            <EditText
+                android:id="@+id/create_conf_name"
+                android:layout_width="301dp"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:ems="10"
+                android:hint="Conference Name"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="26dp" />
+
+            <EditText
+                android:id="@+id/create_conf_address"
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:ems="10"
+                android:hint="Conference Address"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="39dp"
+                tools:layout_editor_absoluteY="102dp" />
+
+            <EditText
+                android:id="@+id/create_conf_time"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="144dp"
+                android:ems="10"
+                android:hint="Conference Time"
+                android:inputType="date"
+                tools:layout_editor_absoluteX="39dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <EditText
+                android:id="@+id/create_conf_date"
+                android:layout_width="302dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="211dp"
+                android:ems="10"
+                android:hint="Conference Date"
+                android:inputType="date"
+                tools:layout_editor_absoluteX="52dp"
+                tools:layout_editor_absoluteY="150dp" />
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

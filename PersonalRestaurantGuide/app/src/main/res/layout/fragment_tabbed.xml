@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fffffe"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="23dp"
+                            android:text="Event Details"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="42dp"
+                            android:layout_marginTop="82dp"
+                            android:text="Name: " />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/textView4"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="113dp"
+                            android:text="Location: " />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/textView4"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="150dp"
+                            android:text="Date &amp; Time: " />
+
+                        <TextView
+                            android:id="@+id/tab1_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/textView4"
+                            android:layout_centerHorizontal="true"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/tab1_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tab1_date_time"
+                            android:layout_below="@+id/tab1_name"
+                            android:layout_alignStart="@+id/tab1_name"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="13dp"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/tab1_date_time"
+                            android:layout_width="187dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/tab1_name"
+                            android:layout_alignTop="@+id/textView7"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="6dp"
+                            android:text="TextView" />
+
+                        <Button
+                            android:id="@+id/btn_attend_conf"
+                            android:layout_width="224dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="58dp"
+                            android:background="@drawable/rounded_button_primary"
+                            android:text="Attend Conference"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/textView6"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="202dp"
+                            android:layout_marginEnd="0dp"
+                            android:text="More Details"
+                            android:textAppearance="@android:style/TextAppearance.Theme" />
+
+                        <TextView
+                            android:id="@+id/tab1_details"
+                            android:layout_width="317dp"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/textView14"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="137dp"
+                            android:text="This is event details plae holder" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fffffe"
+                    android:orientation="vertical">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="0dp">
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="141dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="23dp"
+                            android:layout_marginTop="20dp"
+                            android:text="List of Attendees"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ListView
+                            android:id="@+id/conf_attendees_listview"
+                            android:layout_width="300dp"
+                            android:layout_height="454dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginEnd="30dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fffffe"
+                    android:orientation="vertical">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="0dp">
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="141dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="23dp"
+                            android:layout_marginTop="20dp"
+                            android:text="List of Sponsors"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ListView
+                            android:id="@+id/conf_sponsors_listview"
+                            android:layout_width="300dp"
+                            android:layout_height="454dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginEnd="30dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
