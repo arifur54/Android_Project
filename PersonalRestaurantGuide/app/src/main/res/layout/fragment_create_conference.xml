@@ -25,86 +25,85 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
-                android:id="@+id/create_conf_details"
-                android:layout_width="306dp"
-                android:layout_height="103dp"
-                android:layout_above="@+id/create_conf_btn"
+                android:id="@+id/create_rest_details"
+                android:layout_width="301dp"
+                android:layout_height="68dp"
+                android:layout_alignEnd="@+id/create_rest_name"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="274dp"
-                android:layout_marginBottom="66dp"
+                android:layout_marginTop="211dp"
+                android:layout_marginEnd="-4dp"
                 android:ems="10"
-                android:hint="Conference Details"
+                android:hint="Restaurant Details"
                 android:inputType="textMultiLine"
                 android:textAlignment="viewStart"
                 tools:layout_editor_absoluteX="39dp"
                 tools:layout_editor_absoluteY="262dp" />
 
             <Button
-                android:id="@+id/create_conf_btn"
+                android:id="@+id/create_rest_btn"
                 android:layout_width="228dp"
                 android:layout_height="54dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="57dp"
+                android:layout_marginBottom="89dp"
                 android:background="@drawable/rounded_button_primary"
-                android:text="Create Conference"
+                android:text="Add Restaurant"
                 android:textAllCaps="true"
                 android:textColor="#efefef"
                 tools:layout_editor_absoluteX="78dp"
                 tools:layout_editor_absoluteY="396dp" />
 
             <EditText
-                android:id="@+id/create_conf_name"
+                android:id="@+id/create_rest_name"
                 android:layout_width="301dp"
                 android:layout_height="44dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="22dp"
                 android:ems="10"
-                android:hint="Conference Name"
+                android:hint="Restaurant Name"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="44dp"
                 tools:layout_editor_absoluteY="26dp" />
 
             <EditText
-                android:id="@+id/create_conf_address"
+                android:id="@+id/create_rest_address"
                 android:layout_width="301dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="85dp"
                 android:ems="10"
-                android:hint="Conference Address"
+                android:hint="Restaurant Address"
                 android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="39dp"
                 tools:layout_editor_absoluteY="102dp" />
 
             <EditText
-                android:id="@+id/create_conf_time"
+                android:id="@+id/create_rest_tag"
                 android:layout_width="306dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="144dp"
                 android:ems="10"
-                android:hint="Conference Time"
-                android:inputType="date"
+                android:hint="Food Tags"
+                android:inputType="text"
                 tools:layout_editor_absoluteX="39dp"
                 tools:layout_editor_absoluteY="208dp" />
 
-            <EditText
-                android:id="@+id/create_conf_date"
-                android:layout_width="302dp"
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="211dp"
-                android:ems="10"
-                android:hint="Conference Date"
-                android:inputType="date"
-                tools:layout_editor_absoluteX="52dp"
-                tools:layout_editor_absoluteY="150dp" />
+                android:layout_marginTop="302dp"
+                android:numStars="5"
+                android:progressTint="#FFD700"
+                android:rating="1"
+                android:stepSize="0" />
+
         </RelativeLayout>
 
     </android.support.constraint.ConstraintLayout>

@@ -16,8 +16,8 @@ import android.view.WindowManager;
 import android.widget.ListView;
 import android.widget.TextView;
 import java.util.*;
-import com.quickonference.quickonference.conference.Conference;
 import com.google.gson.*;
+import com.quickonference.quickonference.conference.Restaurant;
 
 public class GeneralScheduleFragment extends Fragment {
 
@@ -34,7 +34,7 @@ public class GeneralScheduleFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_general_schedule, container, false);
         getActivity().setTitle("General Schedule");
         conferenceList = new ArrayList<String>();
-        SharedPreferences confPref = this.getActivity().getSharedPreferences("conferences", Context.MODE_PRIVATE);
+        SharedPreferences confPref = this.getActivity().getSharedPreferences("restaurants", Context.MODE_PRIVATE);
         Gson gson = new Gson();
         Map<String, ?> allEntries = confPref.getAll();
         currentActivity = getActivity();
@@ -44,10 +44,10 @@ public class GeneralScheduleFragment extends Fragment {
             textView.setText("No conferences found. Create one.");
         } else {
             for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
-                Conference conference = gson.fromJson(entry.getValue().toString(), Conference.class);
+                Restaurant conference = gson.fromJson(entry.getValue().toString(), Restaurant.class);
                 String conferenceName = conference.getName();
-                String CapatitalizedName = conferenceName.substring(0,1).toUpperCase() + conferenceName.substring(1);
-                conferenceList.add(CapatitalizedName);
+                // String CapatitalizedName = conferenceName.substring(0,1).toUpperCase() + conferenceName.substring(1);
+                conferenceList.add(conferenceName);
             }
 
             LV = view.findViewById(R.id.conference_list);

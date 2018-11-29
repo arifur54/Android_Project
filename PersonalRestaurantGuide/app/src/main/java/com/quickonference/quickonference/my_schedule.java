@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.quickonference.quickonference.conference.Conference;
+import com.quickonference.quickonference.conference.Restaurant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,7 @@ public class my_schedule extends Fragment {
         Map<String, ?> allEntries = confPref.getAll();
 
         for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
-            Conference conference = gson.fromJson(entry.getValue().toString(), Conference.class);
+            Restaurant conference = gson.fromJson(entry.getValue().toString(), Restaurant.class);
             String conferenceName = conference.getName();
             String CapatitalizedName = conferenceName.substring(0,1).toUpperCase() + conferenceName.substring(1);
             conferenceList.add(CapatitalizedName);
