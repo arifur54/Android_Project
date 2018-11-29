@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="106dp">
+
+        <TextView
+            android:id="@+id/txtView_ResName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="serif"
+            android:text="FirstName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#6d6d6d"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtVIew_Address"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@+id/txtView_ResName"
+            android:layout_alignStart="@+id/txtView_ResName"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="0dp"
+            android:text="Address"
+            android:textAlignment="viewStart"
+            android:textColor="#8e8e8e"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtView_Tags"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@+id/txtVIew_Address"
+            android:layout_alignStart="@+id/txtVIew_Address"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="0dp"
+            android:text="Tags"
+            android:textAlignment="viewStart"
+            android:textColor="#8e8e8e"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

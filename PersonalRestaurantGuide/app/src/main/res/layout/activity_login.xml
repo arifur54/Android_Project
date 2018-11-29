@@ -9,10 +9,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -21,37 +21,39 @@
         app:layout_constraintVertical_bias="0.0">
 
         <EditText
-            android:id="@+id/sign_in_email"
+            android:id="@+id/edText_fName"
             android:layout_width="313dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="110dp"
             android:ems="10"
-            android:hint="Your email"
+            android:hint="Enter First Name"
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/sign_in_password"
+            android:id="@+id/edText_lName"
             android:layout_width="313dp"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/edText_fName"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="91dp"
+            android:layout_marginTop="167dp"
             android:ems="10"
-            android:hint="Your password"
+            android:hint="Enter Last Name"
             android:inputType="text" />
 
         <Button
-            android:id="@+id/button"
-            android:textColor="#ffffff"
+            android:id="@+id/btnEnter"
             android:layout_width="288dp"
             android:layout_height="59dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="159dp"
+            android:layout_below="@+id/edText_lName"
+            android:layout_alignStart="@+id/edText_fName"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="220dp"
             android:background="@drawable/rounded_button_primary"
-            android:text="Log In"
-            android:onClick="toHome"/>
+            android:text="Enter"
+            android:textColor="#ffffff" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
