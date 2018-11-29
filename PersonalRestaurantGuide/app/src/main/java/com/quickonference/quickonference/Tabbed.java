@@ -1,6 +1,7 @@
 package com.quickonference.quickonference;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,12 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TabHost;
 import android.view.ViewGroup;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.*;
 import com.quickonference.quickonference.conference.Restaurant;
 
@@ -25,6 +32,7 @@ public class Tabbed extends Fragment {
     SharedPreferences confPref;
     ListView sponsorListView;
     ListView attendeeListView;
+    private GoogleMap mMap;
     String [] sponsorList = {"Coca Cola", "Scotia Bank", "RBC", "Ferrari", "Labatt", "LCBO"};
     String [] addtendeeList = {"James McPherson", "Arun Patel", "Shawn Mendes", "Jospeh Martini", "Mosh Hamadani", "Andrew Suarez", "Aman Singh"};
     private ArrayAdapter sponsorAdapter;
@@ -49,7 +57,7 @@ public class Tabbed extends Fragment {
         host.addTab(spec);
         TextView rest_name = (TextView)view.findViewById(R.id.tab_rest_name);
         rest_name.setText(conference.getName());
-        TextView rest_address = (TextView)view.findViewById(R.id.tab_rest_name);
+        TextView rest_address = (TextView)view.findViewById(R.id.tab_rest_addres);
         rest_address.setText(conference.getAddress());
         TextView rest_tags = (TextView)view.findViewById(R.id.tab_rest_tags);
         rest_tags.setText(conference.getTag());
@@ -59,9 +67,11 @@ public class Tabbed extends Fragment {
         ratingBar.setRating(Float.valueOf(conference.getRating()));
         //Tab 2
 
-        attendeeListView = (ListView) view.findViewById(R.id.conf_attendees_listview);
-        attendeeAdapter= new ArrayAdapter<>(this.getActivity(), R.layout.listview_item, addtendeeList);
-        attendeeListView.setAdapter(attendeeAdapter);
+//        attendeeListView = (ListView) view.findViewById(R.id.conf_attendees_listview);
+//        attendeeAdapter= new ArrayAdapter<>(this.getActivity(), R.layout.listview_item, addtendeeList);
+//        attendeeListView.setAdapter(attendeeAdapter);
+//        SupportMapFragment mapFragment = get
+//        mapFragment.getMapAsync(onMapReady());
         spec = host.newTabSpec("Attendees");
         spec.setContent(R.id.tab2);
         spec.setIndicator("Attendees");
@@ -76,5 +86,18 @@ public class Tabbed extends Fragment {
         spec.setIndicator("Sponsors");
         host.addTab(spec);
         return view;
+    }
+
+
+
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng toronto = new LatLng(43.676021, -79.411049);
+        mMap.addMarker(new MarkerOptions().position(toronto).title("George Brown College"));
+        mMap.setMinZoomPreference(13);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(toronto));
     }
 }
